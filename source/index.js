@@ -7,15 +7,12 @@ personagens.forEach((personagem) => {
             window.scrollTo({bottom: 0, behavior: 'smooth'})
         }
 
-        const personagemSelecionado = document.querySelector(".selecionado");
-        personagemSelecionado.classList.remove("selecionado");
-
         personagem.classList.add("selecionado");
 
         const imagemPersonagemGrande = document.querySelector('.personagem-grande');
 
         const idPersonagem = personagem.attributes.id.value;
-        imagemPersonagemGrande.src = `../source/personagens/${idPersonagem}_fundo.png`;
+        imagemPersonagemGrande.src = `./source/personagens/${idPersonagem}_fundo.png`;
 
         const nomePersonagem = document.getElementById('nome-personagem')
         nomePersonagem.innerText = personagem.getAttribute('data-name')
